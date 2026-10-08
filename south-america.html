@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800&family=Fraunces:opsz,wght@9..144,400..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Red Pandas in South America | Red Panda Atlas</title>
+</head>
+
+<body data-continent="South America" data-page="continent">
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo-link">
+                <span>Red Panda Atlas</span>
+            </a>
+            <nav class="main-nav"></nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="continent-hero">
+            <div class="page-intro-text">
+                <a href="index.html" class="back-link">&larr; Home</a>
+                <h1>South America</h1>
+                <p>Confirmed red panda holdings in South America are limited. This page relies on community findings
+                    from travelers and zoo fans.</p>
+            </div>
+            <div class="page-intro-image">
+                <figure class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1656899367684-6f234eff00a7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="A red panda peeking around a tree trunk with its mouth open." loading="lazy">
+                    <figcaption class="photo-credit">Photo by <a href="https://unsplash.com/@arttoinspire"
+                            target="_blank" rel="noopener noreferrer">Xiangkun ZHU</a></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="filter-bar">
+            <label for="country-filter" class="filter-label">
+                Filter by country:
+            </label>
+            <select id="country-filter">
+                <option value="">All countries</option>
+            </select>
+        </section>
+
+        <h2>Zoos with red pandas</h2>
+        <div class="continent-content-grid">
+            <div id="zoo-results"></div>
+            <aside class="did-you-know-sidebar">
+                <h2>Did you know?</h2>
+                <p>The few South American institutions that keep red pandas use climate-controlled indoor spaces to
+                    recreate cool Himalayan nights.</p>
+                <div class="wild-range">
+                    <span class="tag">Wild range</span>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <span>Red Panda Atlas</span>
+            <span>Built with love for everyone who loves red pandas</span>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

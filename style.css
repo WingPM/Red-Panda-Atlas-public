@@ -1,0 +1,788 @@
+/* ==================================
+    1. Root Variables & Defaults 
+================================== */
+
+:root {
+    --bg: #f4ede1;
+    --fg: #3a2c1d;
+    --primary: #b15a32;
+    --primary-fg: #f4ede1;
+    --accent: #6f7340;
+    --muted: #ebe1d1;
+    --muted-fg: #7a6a54;
+    --border: #ddcfb9;
+    --card: #fbf6ec;
+    --radius: 12px;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Epilogue', system-ui, sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg);
+    color: var(--fg);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+h1 {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    margin-top: 20px;
+    line-height: 0.95;
+    font-weight: 800;
+}
+
+h2 {
+    font-family: var(--font-display);
+}
+
+p {
+    color: var(--muted-fg);
+    max-width: 500px;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 90%;
+    padding: 20px 0;
+}
+
+/* ==================================
+    2. Header & Navigation 
+================================== */
+
+header {
+    background-color: var(--card);
+    padding: 15px 30px;
+    border-bottom: 2px solid var(--border);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--fg);
+    text-decoration: none;
+}
+
+.logo-link img {
+    height: 70px;
+    width: auto;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--fg);
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover {
+    color: var(--primary);
+}
+
+/* ==================================
+    3. Hero Section 
+================================== */
+
+.hero-container {
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 6px 10px 3px 10px;
+    background-color: var(--accent);
+    color: #ffffff;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.red-panda {
+    color: var(--primary);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.hero-buttons a {
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 800;
+    transition: 0.2s;
+}
+
+.hero-buttons a:hover {
+    transform: translateY(-4px);
+}
+
+.hero-buttons a:first-child {
+    background-color: var(--primary);
+    color: #FFFFFF;
+}
+
+.hero-buttons a:first-child:hover {
+    box-shadow: 6px 6px 0px 0px var(--accent);
+}
+
+.hero-buttons a:last-child {
+    background-color: var(--card);
+    color: var(--fg);
+    border: 2px solid var(--border);
+}
+
+.hero-buttons a:last-child:hover {
+    background-color: var(--muted);
+}
+
+/* ==================================
+    4. Stat Strip & Region Cards
+================================== */
+
+.stat-strip-container {
+    background-color: var(--card);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 2rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+    align-items: center;
+}
+
+.stat-item .stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted-fg);
+    font-weight: 700;
+}
+
+.stat-item .stat-value {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--fg);
+}
+
+.stat-value.status-tag {
+    color: var(--primary);
+}
+
+.regions {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.continent-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.continent-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card);
+    border-radius: var(--radius);
+    border: 2px solid var(--border);
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+}
+
+.continent-card:hover {
+    box-shadow: 6px 6px 0px 0px var(--accent);
+    transform: translateY(-4px);
+}
+
+.continent-card img {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.continent-card:hover img {
+    transform: scale(1.15);
+}
+
+.card-link {
+    font-weight: 700;
+}
+
+.continent-card .card-link .arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.continent-card:hover .card-link .arrow {
+    transform: translateX(6px);
+}
+
+/* ==================================
+    5. Did You Know & Species Spotlight
+================================== */
+
+.did-you-know {
+    background-color: var(--accent);
+    color: var(--primary-fg);
+    padding: 20px;
+    border-radius: var(--radius);
+    border: 2px solid var(--border);
+}
+
+.did-you-know h2 {
+    margin-top: 0;
+}
+
+.did-you-know p {
+    color: var(--primary-fg);
+}
+
+.species-container {
+    background-color: var(--card);
+    border-radius: var(--radius);
+    border: 2px solid var(--border);
+    padding: 2rem;
+}
+
+.species-spotlight-tag {
+    display: inline-block;
+    background-color: var(--primary);
+    color: #FFFFFF;
+    padding: 5px 10px 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.species-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.species-info h3 {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+}
+
+.species-info p {
+    margin-bottom: 1.5rem;
+}
+
+.species-facts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.species-facts li {
+    display: flex;
+    flex-direction: column;
+}
+
+.fact-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted-fg);
+}
+
+.fact-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--fg);
+}
+
+.species-image-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.species-image-wrapper img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border: 2px solid var(--border);
+    box-shadow: 6px 6px 0px 0px var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.card-bottom {
+    transform: translateY(28px);
+}
+
+/* ==================================
+    6. Footer & Legal Disclaimer
+================================== */
+
+footer {
+    background-color: var(--fg);
+    padding: 12px 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+footer .footer-content {
+    padding: 20px 0 0 0;
+}
+
+.footer-content span {
+    color: var(--primary-fg);
+    font-size: 0.9rem;
+}
+
+.legal-bar {
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.legal-bar p {
+    font-size: 0.7rem;
+    color: var(--primary-fg);
+    opacity: 0.55;
+    margin: 0 auto;
+    max-width: 900px;
+    line-height: 1.3;
+}
+
+/* ==================================
+    7. Continent Pages
+================================== */
+
+.continent-hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.page-intro-text h1 {
+    margin-bottom: 0.5rem;
+}
+
+.back-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.image-wrapper {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.image-wrapper img {
+    width: 100%;
+    max-width: 450px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border: 2px solid var(--border);
+    box-shadow: 6px 6px 0px 0px var(--accent);
+}
+
+.photo-credit {
+    font-size: 0.75rem;
+    color: var(--muted-fg);
+    margin-top: 14px;
+}
+
+.photo-credit a {
+    color: var(--muted-fg);
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.photo-credit a:hover {
+    color: var(--primary);
+}
+
+.filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--card);
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    border: 2px solid var(--border);
+    margin-bottom: 2rem;
+}
+
+.filter-label {
+    font-weight: 700;
+}
+
+select#country-filter {
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    border: 2px solid var(--border);
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+select#country-filter:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.continent-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+#zoo-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.zoo-card {
+    background-color: var(--card);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.zoo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 4px 4px 0px 0px var(--primary);
+}
+
+.zoo-card h3 {
+    margin: 0;
+    font-family: var(--font-display);
+}
+
+.zoo-card p {
+    margin: 0;
+}
+
+.zoo-card a {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 0.5rem;
+}
+
+.zoo-card a:hover {
+    text-decoration: underline;
+}
+
+.did-you-know-sidebar {
+    background-color: var(--accent);
+    color: var(--primary-fg);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 2px solid var(--border);
+}
+
+.did-you-know-sidebar h2 {
+    margin-top: 0;
+}
+
+.did-you-know-sidebar p {
+    color: var(--primary-fg);
+    max-width: 100%;
+}
+
+.wild-range {
+    margin-top: 1rem;
+    display: block;
+}
+
+.did-you-know-sidebar .tag {
+    display: inline-block;
+    background-color: var(--primary);
+    color: #ffffff;
+    padding: 5px 10px 3px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* ==================================
+    8. Form & Conservation Sections
+================================== */
+
+.form-section {
+    background-color: var(--card);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.form-section h2 {
+    margin-top: 0;
+}
+
+#finding-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    border: 2px solid var(--border);
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+}
+
+.form-group select {
+    font-weight: 600;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+#finding-form button[type="submit"] {
+    grid-column: span 2;
+    padding: 12px 24px;
+    background-color: var(--primary);
+    color: #FFFFFF;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: 800;
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition: transform 0.2s;
+    width: max-content;
+}
+
+#finding-form button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0px 0px var(--accent);
+}
+
+.donate-tag {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #ffffff;
+    padding: 6px 10px 3px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.donate-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.donate-card {
+    background-color: var(--card);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.donate-card-logo {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.donate-card-logo img {
+    max-height: 100%;
+    max-width: 160px;
+    width: auto;
+    object-fit: contain;
+}
+
+.donate-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--fg);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.donate-card p {
+    font-size: 0.85rem;
+    color: var(--muted-fg);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    line-height: 1.45;
+}
+
+.donate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    background-color: var(--primary);
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: var(--radius);
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.2;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.donate-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0px 0px var(--accent);
+}
+
+/* ==================================
+    9. Back-to-Top Floating Widget
+================================== */
+
+#back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--primary);
+    color: #ffffff;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 10px 16px;
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px 0px var(--fg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s, bottom 0.15s ease;
+    z-index: 1000;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    background-color: var(--accent);
+    transform: translateY(-2px);
+}
