@@ -190,7 +190,7 @@ header {
     border: 2px solid var(--border);
     border-radius: var(--radius);
     padding: 1.25rem 2rem;
-    margin: 1rem 0 2rem 0;
+    margin: 1rem 10px 2rem 10px;
 }
 
 .stat-grid {
@@ -306,6 +306,7 @@ header {
     border-radius: var(--radius);
     border: 2px solid var(--border);
     padding: 2rem;
+    margin: 1rem 10px 2rem 10px;
 }
 
 .species-spotlight-tag {
@@ -608,7 +609,7 @@ select#country-filter:focus {
     border: 2px solid var(--border);
     border-radius: var(--radius);
     padding: 2rem;
-    margin-top: 3rem;
+    margin: 0 10px 10px 10px;
 }
 
 .form-section h2 {
