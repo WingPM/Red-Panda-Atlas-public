@@ -116,9 +116,14 @@ header {
 .hero-container {
     display: flex;
     align-items: center;
+    gap: 2.5rem;
 }
 
 .hero-text {
+    flex: 1;
+}
+
+.hero-image-wrapper {
     flex: 1;
 }
 
