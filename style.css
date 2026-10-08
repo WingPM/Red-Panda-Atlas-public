@@ -292,6 +292,7 @@ header {
 
 .did-you-know p {
     color: var(--primary-fg);
+    max-width: 100%;
 }
 
 .species-container {
