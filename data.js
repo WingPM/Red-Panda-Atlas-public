@@ -1,7 +1,7 @@
 const zooData = {
 
   "Asia": [
-    
+
 
     // --------------------------
     // SINGAPORE
@@ -89,7 +89,7 @@ const zooData = {
     // RUSSIA
     // --------------------------
 
-    
+
     { name: "Moscow Zoo", country: "Russia", city: "Moscow", website: "https://en.moscowzoo.ru/" },
 
     { name: "Novosibirsk Zoo", country: "Russia", city: "Novosibirsk", website: "http://zoonovosib.ru/" },
@@ -809,6 +809,12 @@ const zooData = {
     { name: "Pécs Zoo", continent: "Europe", country: "Hungary", city: "Pécs", website: "https://pecszoo.hu/" },
 
     { name: "Sóstó Zoo (Nyíregyháza Zoo)", continent: "Europe", country: "Hungary", city: "Nyíregyháza", website: "https://sostozoo.hu/" },
+
+    { name: "Veszprém Zoo", continent: "Europe", country: "Hungary", city: "Veszprém", website: "https://www.veszpremzoo.hu/en" },
+
+    { name: "Jászberény Állat- és Növénykert", continent: "Europe", country: "Hungary", city: "Jászberény", website: "https://jaszberenyzoo.hu/" },
+
+    { name: "Szegedi vadaspark / Szeged Zoo", continent: "Europe", country: "Hungary", city: "Szeged", website: "https://zooszeged.hu/" },
 
 
     // --------------------------
